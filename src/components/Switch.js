@@ -13,7 +13,7 @@ const Switch = ({ toggle, setToggle }) => {
       </div>
       <div
         className={
-          "w-14 md:h-6 w-10 h-6 flex items-center bg-emerald-400 rounded-full cursor-pointer" +
+          "w-14 md:h-6 w-10 h-6 flex items-center rounded-full cursor-pointer" +
           (toggle ? " bg-teal-400" : " bg-slate-300")
         }
         onClick={() => {
