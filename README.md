@@ -1,12 +1,6 @@
 # Lambda Test
 
 
-
-![](/1.png)
-![](/2.png)
-![](/3.png)
-
-
 ### Getting Started
 
 clone/download the repository on your local machine.
@@ -19,6 +13,12 @@ clone/download the repository on your local machine.
 ##### Run Lamda Test from the root directory.
 
 `npm start`
+
+### Project Preview
+
+![](/1.png)
+![](/2.png)
+![](/3.png)
 
 ### Built With
 
