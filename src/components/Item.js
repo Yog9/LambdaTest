@@ -2,6 +2,10 @@ import React from "react";
 import SelectOptions from "./SelectOptions";
 import PropTypes from "prop-types";
 
+/**
+ * Component that renders a Item
+ * @returns JSX Element
+ */
 const Item = ({
   toggle,
   data,
@@ -40,9 +44,9 @@ const Item = ({
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid-container grid grid-cols-4 gap-1">
         <input
-          className="mb-1 appearance-none py-2 px-3 text-gray-700 leading-tight focus:outline-none active:bg-white hover:bg-slate-300 focus: bg-white"
+          className="cursor-pointer pl-2 col-span-2 mb-1 appearance-none py-2 text-gray-700 leading-tight active:bg-slate-300 hover:bg-slate-300 focus:bg-slate-300 focus-within:bg-slate-300"
           type="text"
           name="email"
           value={email}
