@@ -5,9 +5,9 @@
     outline: 0;
   }
 
-.select_box{
-    padding-left: 0px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border:1px rgb(44, 42, 42)
+.select_box {
+  border: 1px rgb(192, 187, 187) solid;
+  width: 80px;
+  border-radius: 5px;
+  outline: 2px;
 }
