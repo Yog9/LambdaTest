@@ -16,9 +16,10 @@ clone/download the repository on your local machine.
 
 ### Project Preview
 
-![](/1.png)
-![](/2.png)
-![](/3.png)
+![](/First.png)
+![](/Second.png)
+![](/Third.png)
+![](/four.png)
 
 ### Built With
 
