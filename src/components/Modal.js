@@ -6,6 +6,10 @@ import ItemList from "./ItemList";
 import SelectOptions from "./SelectOptions";
 import PropTypes from "prop-types";
 
+/**
+ * Component that renders a Modal
+ * @returns JSX Element
+ */
 const Modal = ({ peopleData, setPeopleData }) => {
   const roleOptions = [
     { id: "1", value: "Admin", label: "Admin" },
@@ -108,7 +112,7 @@ const Modal = ({ peopleData, setPeopleData }) => {
       setDisabled(false);
     }
     for (let i = 0; i < peopleData.length; i++) {
-      if (i !== id - 1 && peopleData[i].email.length == 0) {
+      if (i !== id - 1 && peopleData[i].email.length === 0) {
         setDisabled(true);
       }
     }
@@ -117,9 +121,9 @@ const Modal = ({ peopleData, setPeopleData }) => {
 
   return (
     <>
-      <div className="flex justify-center items-center h-64">
+      <div className="flex justify-center items-center h-60">
         <button
-          className="bg-emerald-400 text-white active:bg-emerald-600 font-light uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="bg-teal-400 text-white active:bg-teal-400 font-light uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowModal(true)}
         >
@@ -129,19 +133,24 @@ const Modal = ({ peopleData, setPeopleData }) => {
       {showModal ? (
         <>
           <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none overflow-x-hidden">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-600">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-5 rounded-t">
                   <h3 className="text-3xl font-light">Select Role</h3>
-                  <button onClick={() => setShowModal(false)}>x</button>
+                  <button
+                    className="font-light text-zinc-400"
+                    onClick={() => setShowModal(false)}
+                  >
+                    x
+                  </button>
                 </div>
-                <div className="relative pt-0 pl-6 pr-6 pb-0 flex-auto">
+                <div className="relative pt-0 pl-6 pr-6 pb-2">
                   <div className="flex justify-between">
                     <div className="flex">
                       <Switch toggle={toggle} setToggle={updateToggle} />
                     </div>
                     {!toggle ? (
-                      <div>
+                      <div className="flex justify-between">
                         <SelectOptions
                           options={roleOptions}
                           selectedOption={selectedRoleOption}
@@ -165,15 +174,14 @@ const Modal = ({ peopleData, setPeopleData }) => {
                     setSelectedGroupOptionForKey={setSelectedGroupOptionForKey}
                     setSelectedRoleOptionForKey={setSelectedRoleOptionForKey}
                     setUpdatedEmailId={setUpdatedEmailId}
-                    selectedGroupOption={selectedGroupOption}
                     groupOptions={groupOptions}
                   />
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                   <button
                     className={
-                      "bg-emerald-400 text-white active:bg-emerald-400 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 " +
-                      (disabled ? " bg-slate-300" : "")
+                      "text-white active:bg-teal-400 font-light text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 " +
+                      (disabled ? " bg-slate-300" : " bg-teal-400 ")
                     }
                     type="button"
                     disabled={disabled}
