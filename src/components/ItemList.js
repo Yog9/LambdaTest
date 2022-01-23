@@ -2,6 +2,10 @@ import React from "react";
 import Item from "./Item";
 import PropTypes from "prop-types";
 
+/**
+ * Component that renders a list of People Data
+ * @returns JSX Element
+ */
 const ItemList = ({
   peopleData,
   toggle,
