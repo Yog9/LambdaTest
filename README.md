@@ -5,7 +5,8 @@
 
 clone/download the repository on your local machine.
 
-
+Note : Use node version above 14.0.0
+ 
 ##### Install dependencies
 
 `npm install`
