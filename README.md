@@ -17,10 +17,9 @@ Note : Use node version above 14.0.0
 
 ### Project Preview
 
-![](/First.png)
-![](/Second.png)
-![](/Third.png)
-![](/four.png)
+![](/img/1.png)
+![](/img/2.png)
+![](/img/3.png)
 
 ### Built With
 
